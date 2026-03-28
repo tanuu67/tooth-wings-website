@@ -22,7 +22,6 @@ header {
     background: white;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 header h2 { color: #0077b6; }
 nav a {
@@ -36,13 +35,13 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 40px;
-    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    padding: 60px 40px;
+    background: linear-gradient(135deg,#0077b6,#00b4d8);
     color: white;
     flex-wrap: wrap;
 }
-.hero-image img {
-    width: 350px;
+.hero img {
+    width: 320px;
     border-radius: 15px;
     animation: float 4s infinite;
 }
@@ -50,15 +49,14 @@ nav a {
     50% { transform: translateY(-10px); }
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 20px;
     background: white;
     color: #0077b6;
     padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
+    margin-top: 15px;
 }
 
 /* SECTION */
@@ -67,21 +65,41 @@ nav a {
     text-align: center;
 }
 
-/* CARDS */
+/* SERVICES */
 .card {
     display: inline-block;
-    width: 250px;
+    width: 220px;
     margin: 10px;
     padding: 20px;
     background: white;
     border-radius: 10px;
+    transition: 0.3s;
 }
+.card:hover { transform: translateY(-8px); }
 
 /* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .gallery img {
     width: 250px;
+    height: 180px;
+    object-fit: cover;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+/* FORM */
+input, textarea {
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
 }
 
 /* CONTACT */
@@ -106,8 +124,8 @@ nav a {
 
 /* MOBILE */
 @media(max-width:768px){
-.hero {flex-direction: column; text-align:center;}
-.hero-image img {width:250px;}
+.hero {flex-direction: column;text-align:center;}
+.hero img {width:220px;margin-top:20px;}
 }
 </style>
 </head>
@@ -115,65 +133,64 @@ nav a {
 <body>
 
 <header>
-    <h2>Tooth Wings</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h2>Tooth Wings</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div>
-        <h1>Smile Brighter 😁</h1>
-        <p>Top-rated Dental Clinic in Zirakpur (4.9⭐)</p>
-        <a class="btn" href="tel:9876427788">Call Now</a>
-    </div>
+<div>
+<h1>Smile Brighter 😁</h1>
+<p>Top-rated Dental Clinic in Zirakpur (4.9⭐)</p>
+<a class="btn" href="tel:9876427788">Call Now</a>
+</div>
 
-    <div class="hero-image">
-        <img src="clinic.png">
-    </div>
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 </section>
 
 <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="card">Teeth Whitening</div>
-    <div class="card">Root Canal</div>
-    <div class="card">Dental Implants</div>
-    <div class="card">Braces</div>
+<h2>Our Services</h2>
+<div class="card">Teeth Whitening</div>
+<div class="card">Root Canal</div>
+<div class="card">Dental Implants</div>
+<div class="card">Braces</div>
 </section>
 
 <section id="gallery" class="section">
-    <h2>Clinic Gallery</h2>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/300">
-        <img src="https://via.placeholder.com/300">
-        <img src="https://via.placeholder.com/300">
-    </div>
+<h2>Clinic Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e1c2f9c3b">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09">
+<img src="https://images.unsplash.com/photo-1588771930296-88c2cb03f386">
+</div>
 </section>
 
 <section class="section">
-    <h2>Book Appointment</h2>
-    <form onsubmit="sendWhatsApp(); return false;">
-        <input type="text" id="name" placeholder="Name"><br><br>
-        <input type="text" id="phone" placeholder="Phone"><br><br>
-        <textarea id="msg" placeholder="Problem"></textarea><br><br>
-        <button class="btn">Book on WhatsApp</button>
-    </form>
+<h2>Book Appointment</h2>
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Name" required><br>
+<input type="text" id="phone" placeholder="Phone" required><br>
+<textarea id="msg" placeholder="Problem"></textarea><br>
+<button class="btn">Book on WhatsApp</button>
+</form>
 </section>
 
 <section id="contact" class="contact">
-    <h2>Visit Us</h2>
-    <p>SCO 11, Imperial Apartments, Zirakpur</p>
-    <p>📞 9876427788</p>
+<h2>Visit Us</h2>
+<p>SCO 11, Imperial Apartments, Zirakpur</p>
+<p>📞 9876427788</p>
 
-    <iframe src="https://www.google.com/maps?q=30.6519176,76.8515413&output=embed"
-    width="100%" height="300" style="border-radius:10px;"></iframe>
+<iframe src="https://www.google.com/maps?q=30.6519176,76.8515413&output=embed"
+width="100%" height="300" style="border-radius:10px;"></iframe>
 </section>
 
-<footer>
-    <p>© 2026 Tooth Wings Dental Clinic</p>
+<footer style="text-align:center;padding:15px;background:#023e8a;color:white;">
+© 2026 Tooth Wings Dental Clinic
 </footer>
 
 <a href="https://wa.me/919876427788" class="whatsapp">💬</a>
