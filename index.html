@@ -3,32 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tooth Wings Dental</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;color:#222;background:#fff}
-
-/* CONTAINER */
-.container{max-width:1200px;margin:auto;padding:0 20px}
+body{font-family:'Poppins',sans-serif}
 
 /* HEADER */
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 0;
+padding:15px 30px;
+background:#fff;
 position:sticky;
 top:0;
-background:#fff;
-z-index:1000;
 }
 
+/* LOGO */
 .logo-box{
 display:flex;
 align-items:center;
@@ -39,6 +34,7 @@ gap:10px;
 width:35px;
 }
 
+/* NAV */
 nav a{
 margin-left:20px;
 text-decoration:none;
@@ -47,171 +43,65 @@ color:#333;
 
 /* HERO */
 .hero{
-padding:80px 0;
-background:linear-gradient(120deg,#e6f2ff,#fff);
-}
-
-.hero-flex{
 display:flex;
 align-items:center;
-gap:40px;
-}
-
-.hero h1{
-font-size:48px;
-}
-
-.hero button{
-margin-top:15px;
-padding:12px 25px;
-background:#0b5ed7;
-color:#fff;
-border:none;
-border-radius:6px;
+justify-content:space-between;
+padding:60px 30px;
+flex-wrap:wrap;
 }
 
 .hero img{
-width:100%;
-max-width:400px;
-border-radius:15px;
+width:300px;
+border-radius:10px;
 }
-
-/* SECTION */
-section{padding:80px 0}
-h2{text-align:center;margin-bottom:30px}
 
 /* SERVICES */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
+padding:40px;
 }
 
 .card{
-background:#f8fbff;
+background:#f5f9ff;
 padding:20px;
 border-radius:10px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-/* WHY */
-.why-flex{
-display:flex;
-align-items:center;
-gap:40px;
-}
-
-/* TESTIMONIAL */
-.testimonial-box{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.testimonial{
-background:#f8fbff;
-padding:20px;
-border-radius:10px;
-}
-
-/* SLIDER */
-.slider img{
-width:100%;
-max-width:500px;
-border-radius:10px;
-display:block;
-margin:auto;
 }
 
 /* GALLERY */
+.gallery{
+padding:40px;
+text-align:center;
+}
+
 .gallery-box{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
 }
 
 .gallery-box img{
 width:100%;
-border-radius:12px;
-transition:0.3s;
-}
-
-.gallery-box img:hover{
-transform:scale(1.08);
+border-radius:10px;
 }
 
 /* CONTACT */
-form{
-max-width:400px;
-margin:auto;
+.contact{
+padding:40px;
+text-align:center;
 }
 
-form input{
+input,button{
 width:100%;
 margin:10px 0;
 padding:10px;
 }
 
-form button{
-width:100%;
-padding:10px;
+button{
 background:#0b5ed7;
-color:#fff;
+color:white;
 border:none;
-}
-
-/* MAP */
-iframe{
-width:100%;
-height:300px;
-border:none;
-border-radius:10px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#fff;
-padding:12px;
-border-radius:50%;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#0b5ed7;
-color:#fff;
-}
-
-/* ANIMATION */
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:.6s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.hero-flex,.why-flex{
-flex-direction:column;
-text-align:center;
-}
-.hero h1{
-font-size:30px;
-}
 }
 
 </style>
@@ -220,7 +110,7 @@ font-size:30px;
 <body>
 
 <!-- HEADER -->
-<header class="container">
+<header>
 <div class="logo-box">
 <img src="logo.jpg">
 <h2>Tooth Wings</h2>
@@ -235,79 +125,27 @@ font-size:30px;
 </header>
 
 <!-- HERO -->
-<section class="hero hidden">
-<div class="container hero-flex">
-
+<section class="hero">
 <div>
 <h1>Your Smile, Our Priority</h1>
-<p>Modern dental care with expert doctors</p>
-<button>Book Appointment</button>
+<p>Modern dental care</p>
 </div>
 
 <img src="clinic1.jpg">
-
-</div>
 </section>
 
 <!-- SERVICES -->
-<section class="hidden" id="services">
-<div class="container">
-<h2>Our Services</h2>
-
+<section id="services">
 <div class="cards">
 <div class="card">Dental Implants</div>
 <div class="card">Root Canal</div>
 <div class="card">Whitening</div>
 <div class="card">Braces</div>
 </div>
-
-</div>
 </section>
 
-<!-- WHY -->
-<section class="hidden">
-<div class="container why-flex">
-
-<img src="clinic2.jpg" width="350">
-
-<div>
-<h2>Why Choose Us</h2>
-<p>Advanced equipment, expert doctors & best care.</p>
-</div>
-
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="hidden">
-<div class="container">
-<h2>Patients Review</h2>
-
-<div class="testimonial-box">
-<div class="testimonial">Best clinic ⭐⭐⭐⭐⭐</div>
-<div class="testimonial">Very friendly doctor</div>
-<div class="testimonial">Pain free treatment</div>
-</div>
-
-</div>
-</section>
-
-<!-- SLIDER -->
-<section class="hidden">
-<div class="container">
-<h2>Before & After</h2>
-
-<div class="slider">
-<img id="slide" src="clinic1.jpg">
-</div>
-
-</div>
-</section>
-
-<!-- GALLERY -->
-<section class="hidden" id="gallery">
-<div class="container">
-
+<!-- GALLERY (DOCTORS REMOVED) -->
+<section class="gallery" id="gallery">
 <h2>Our Gallery</h2>
 
 <div class="gallery-box">
@@ -315,63 +153,19 @@ font-size:30px;
 <img src="clinic2.jpg">
 <img src="clinic3.jpg">
 <img src="clinic4.jpg">
-<img src="clinic1.jpg">
-<img src="clinic2.jpg">
 </div>
 
-</div>
 </section>
 
 <!-- CONTACT -->
-<section class="hidden" id="contact">
-<div class="container">
-
+<section class="contact" id="contact">
 <h2>Book Appointment</h2>
 
-<form>
-<input type="text" placeholder="Name">
-<input type="tel" placeholder="Phone">
-<input type="date">
+<input placeholder="Name">
+<input placeholder="Phone">
 <button>Submit</button>
-</form>
 
-</div>
 </section>
-
-<!-- MAP -->
-<section class="hidden">
-<div class="container">
-<h2>Location</h2>
-<iframe src="https://www.google.com/maps?q=chandigarh&output=embed"></iframe>
-</div>
-</section>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20appointment" class="whatsapp">💬</a>
-
-<footer>© 2026 Tooth Wings</footer>
-
-<script>
-
-// ANIMATION
-const observer=new IntersectionObserver(e=>{
-e.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show")
-}
-})
-});
-document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
-
-// SLIDER
-let imgs=["clinic1.jpg","clinic2.jpg","clinic3.jpg"];
-let i=0;
-setInterval(()=>{
-i=(i+1)%imgs.length;
-document.getElementById("slide").src=imgs[i];
-},2000);
-
-</script>
 
 </body>
 </html>
