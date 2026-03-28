@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: #0B5ED7;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to right, #EAF4FF, #ffffff);
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #0B5ED7;
+}
+
+.hero-text button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0B5ED7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero-img img {
+    width: 350px;
+    border-radius: 20px;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.gallery-box {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-box img {
+    width: 220px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.05);
+}
+
+/* SERVICES */
+.services {
+    padding: 60px;
+    background: #EAF4FF;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 160px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0B5ED7;
+    color: white;
+}
