@@ -7,182 +7,221 @@
 <title>Tooth Wings Dental</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:#222;background:#fff}
+
+/* CONTAINER */
+.container{max-width:1200px;margin:auto;padding:0 20px}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 0;position:sticky;top:0;background:#fff;z-index:1000}
+.logo{font-weight:700;color:#0b5ed7}
+nav a{margin-left:20px;text-decoration:none;color:#333}
+
+/* HERO */
+.hero{padding:80px 0;background:linear-gradient(120deg,#e6f2ff,#fff)}
+.hero-flex{display:flex;align-items:center;gap:40px}
+.hero h1{font-size:48px}
+.hero button{margin-top:15px;padding:12px 25px;background:#0b5ed7;color:#fff;border:none;border-radius:6px}
+
+/* IMAGE */
+.hero img{width:100%;max-width:400px;border-radius:15px}
+
+/* SECTION */
+section{padding:80px 0}
+h2{text-align:center;margin-bottom:30px}
+
+/* SERVICES */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:#f8fbff;padding:20px;border-radius:10px;transition:.3s}
+.card:hover{transform:translateY(-10px)}
+
+/* WHY */
+.why-flex{display:flex;align-items:center;gap:40px}
+
+/* DOCTORS */
+.doctor-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center}
+.doctor img{width:100%;border-radius:10px}
+
+/* TESTIMONIAL */
+.testimonial-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.testimonial{background:#f8fbff;padding:20px;border-radius:10px}
+
+/* SLIDER */
+.slider img{width:100%;max-width:500px;border-radius:10px;display:block;margin:auto}
+
+/* GALLERY */
+.gallery-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+
+/* CONTACT */
+form{max-width:400px;margin:auto}
+form input{width:100%;margin:10px 0;padding:10px}
+form button{width:100%;padding:10px;background:#0b5ed7;color:#fff;border:none}
+
+/* MAP */
+iframe{width:100%;height:300px;border:none;border-radius:10px}
+
+/* WHATSAPP */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px;border-radius:50%}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;background:#0b5ed7;color:#fff}
+
+/* ANIMATION */
+.hidden{opacity:0;transform:translateY(40px);transition:.6s}
+.show{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero-flex,.why-flex{flex-direction:column;text-align:center}
+.hero h1{font-size:30px}
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header class="container">
-    <h2 class="logo">🦷 Tooth Wings</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#doctors">Doctors</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h2 class="logo">🦷 Tooth Wings</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <!-- HERO -->
 <section class="hero hidden">
 <div class="container hero-flex">
 
-<div class="hero-text">
-    <h1>Your Smile, Our Priority</h1>
-    <p>Advanced dental care with modern technology.</p>
-    <button>Book Appointment</button>
+<div>
+<h1>Your Smile, Our Priority</h1>
+<p>Modern dental care with expert doctors</p>
+<button>Book Appointment</button>
 </div>
 
-<div class="hero-img">
-    <img src="clinic1.jpg">
-</div>
+<img src="clinic1.jpg">
 
 </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services hidden" id="services">
+<section class="hidden" id="services">
 <div class="container">
-
 <h2>Our Services</h2>
-
 <div class="cards">
-    <div class="card">Dental Implants</div>
-    <div class="card">Root Canal</div>
-    <div class="card">Teeth Whitening</div>
-    <div class="card">Braces</div>
+<div class="card">Dental Implants</div>
+<div class="card">Root Canal</div>
+<div class="card">Whitening</div>
+<div class="card">Braces</div>
 </div>
-
 </div>
 </section>
 
 <!-- WHY -->
-<section class="why hidden">
+<section class="hidden">
 <div class="container why-flex">
-
-<div class="why-img">
-    <img src="clinic2.jpg">
+<img src="clinic2.jpg" width="350">
+<div>
+<h2>Why Choose Us</h2>
+<p>Advanced equipment, expert doctors & best care.</p>
 </div>
-
-<div class="why-text">
-    <h2>Why Choose Us</h2>
-    <ul>
-        <li>✔ Experienced Doctors</li>
-        <li>✔ Modern Technology</li>
-        <li>✔ Pain-free Treatment</li>
-        <li>✔ Affordable Pricing</li>
-    </ul>
-</div>
-
 </div>
 </section>
 
 <!-- DOCTORS -->
-<section class="doctors hidden" id="doctors">
+<section class="hidden">
 <div class="container">
-
 <h2>Our Doctors</h2>
-
 <div class="doctor-cards">
-
-<div class="doctor">
-    <img src="clinic1.jpg">
-    <h3>Dr. Sharma</h3>
+<div class="doctor"><img src="clinic1.jpg"><h3>Dr Sharma</h3></div>
+<div class="doctor"><img src="clinic2.jpg"><h3>Dr Mehta</h3></div>
+<div class="doctor"><img src="clinic3.jpg"><h3>Dr Singh</h3></div>
 </div>
-
-<div class="doctor">
-    <img src="clinic2.jpg">
-    <h3>Dr. Mehta</h3>
-</div>
-
-<div class="doctor">
-    <img src="clinic3.jpg">
-    <h3>Dr. Singh</h3>
-</div>
-
-</div>
-
 </div>
 </section>
 
-<!-- BEFORE AFTER -->
-<section class="before-after hidden">
+<!-- TESTIMONIAL -->
+<section class="hidden">
 <div class="container">
-
-<h2>Before & After</h2>
-
-<div class="slider">
-    <img id="slide" src="clinic1.jpg">
+<h2>Patients Review</h2>
+<div class="testimonial-box">
+<div class="testimonial">Best clinic ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">Very friendly doctor</div>
+<div class="testimonial">Pain free treatment</div>
 </div>
+</div>
+</section>
 
+<!-- SLIDER -->
+<section class="hidden">
+<div class="container">
+<h2>Before & After</h2>
+<div class="slider">
+<img id="slide" src="clinic1.jpg">
+</div>
 </div>
 </section>
 
 <!-- GALLERY -->
-<section class="gallery hidden">
+<section class="hidden">
 <div class="container">
-
-<h2>Our Clinic</h2>
-
+<h2>Gallery</h2>
 <div class="gallery-box">
-    <img src="clinic1.jpg">
-    <img src="clinic2.jpg">
-    <img src="clinic3.jpg">
-    <img src="clinic4.jpg">
+<img src="clinic1.jpg">
+<img src="clinic2.jpg">
+<img src="clinic3.jpg">
+<img src="clinic4.jpg">
 </div>
-
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact hidden" id="contact">
+<section class="hidden" id="contact">
 <div class="container">
-
 <h2>Book Appointment</h2>
-
 <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="date" required>
-    <button type="submit">Submit</button>
+<input type="text" placeholder="Name">
+<input type="tel" placeholder="Phone">
+<input type="date">
+<button>Submit</button>
 </form>
-
 </div>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+<!-- MAP -->
+<section class="hidden">
+<div class="container">
+<h2>Location</h2>
+<iframe src="https://www.google.com/maps?q=chandigarh&output=embed"></iframe>
+</div>
+</section>
 
-<footer>
-<p>© 2026 Tooth Wings Dental Clinic</p>
-</footer>
+<a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20appointment" class="whatsapp">💬</a>
 
-<!-- JS ANIMATION + SLIDER -->
+<footer>© 2026 Tooth Wings</footer>
+
 <script>
-
-// SCROLL ANIMATION
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
+// ANIMATION
+const observer=new IntersectionObserver(e=>{
+e.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show")}
+})
 });
-});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
 
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
-
-// AUTO IMAGE SLIDER
-const images = ["clinic1.jpg","clinic2.jpg","clinic3.jpg"];
-let i = 0;
-
+// SLIDER
+let imgs=["clinic1.jpg","clinic2.jpg","clinic3.jpg"];
+let i=0;
 setInterval(()=>{
-i++;
-if(i >= images.length) i = 0;
-document.getElementById("slide").src = images[i];
+i=(i+1)%imgs.length;
+document.getElementById("slide").src=imgs[i];
 },2000);
-
 </script>
 
 </body>
