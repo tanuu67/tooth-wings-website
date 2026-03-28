@@ -14,22 +14,22 @@
 
 <!-- HEADER -->
 <header class="container">
-    <h2 class="logo">Tooth Wings</h2>
+    <h2 class="logo">🦷 Tooth Wings</h2>
     <nav>
         <a href="#">Home</a>
         <a href="#services">Services</a>
-        <a href="#about">About</a>
+        <a href="#doctors">Doctors</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero hidden">
 <div class="container hero-flex">
 
 <div class="hero-text">
     <h1>Your Smile, Our Priority</h1>
-    <p>Advanced dental care with modern technology & expert doctors.</p>
+    <p>Advanced dental care with modern technology.</p>
     <button>Book Appointment</button>
 </div>
 
@@ -41,38 +41,23 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
+<section class="services hidden" id="services">
 <div class="container">
 
 <h2>Our Services</h2>
 
 <div class="cards">
-    <div class="card">
-        <h3>Dental Implants</h3>
-        <p>Permanent solution for missing teeth</p>
-    </div>
-
-    <div class="card">
-        <h3>Root Canal</h3>
-        <p>Painless root canal treatment</p>
-    </div>
-
-    <div class="card">
-        <h3>Teeth Whitening</h3>
-        <p>Brighten your smile instantly</p>
-    </div>
-
-    <div class="card">
-        <h3>Braces</h3>
-        <p>Perfect alignment for your teeth</p>
-    </div>
+    <div class="card">Dental Implants</div>
+    <div class="card">Root Canal</div>
+    <div class="card">Teeth Whitening</div>
+    <div class="card">Braces</div>
 </div>
 
 </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="why">
+<!-- WHY -->
+<section class="why hidden">
 <div class="container why-flex">
 
 <div class="why-img">
@@ -81,11 +66,9 @@
 
 <div class="why-text">
     <h2>Why Choose Us</h2>
-    <p>We provide modern dental care with latest technology and patient comfort.</p>
-
     <ul>
         <li>✔ Experienced Doctors</li>
-        <li>✔ Advanced Equipment</li>
+        <li>✔ Modern Technology</li>
         <li>✔ Pain-free Treatment</li>
         <li>✔ Affordable Pricing</li>
     </ul>
@@ -94,35 +77,49 @@
 </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-<div class="container stats-box">
+<!-- DOCTORS -->
+<section class="doctors hidden" id="doctors">
+<div class="container">
 
-<div>
-    <h3>500+</h3>
-    <p>Happy Patients</p>
+<h2>Our Doctors</h2>
+
+<div class="doctor-cards">
+
+<div class="doctor">
+    <img src="clinic1.jpg">
+    <h3>Dr. Sharma</h3>
 </div>
 
-<div>
-    <h3>1000+</h3>
-    <p>Successful Cases</p>
+<div class="doctor">
+    <img src="clinic2.jpg">
+    <h3>Dr. Mehta</h3>
 </div>
 
-<div>
-    <h3>10+</h3>
-    <p>Years Experience</p>
+<div class="doctor">
+    <img src="clinic3.jpg">
+    <h3>Dr. Singh</h3>
 </div>
 
-<div>
-    <h3>5+</h3>
-    <p>Doctors</p>
+</div>
+
+</div>
+</section>
+
+<!-- BEFORE AFTER -->
+<section class="before-after hidden">
+<div class="container">
+
+<h2>Before & After</h2>
+
+<div class="slider">
+    <img id="slide" src="clinic1.jpg">
 </div>
 
 </div>
 </section>
 
 <!-- GALLERY -->
-<section class="gallery">
+<section class="gallery hidden">
 <div class="container">
 
 <h2>Our Clinic</h2>
@@ -138,7 +135,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="contact hidden" id="contact">
 <div class="container">
 
 <h2>Book Appointment</h2>
@@ -159,6 +156,34 @@
 <footer>
 <p>© 2026 Tooth Wings Dental Clinic</p>
 </footer>
+
+<!-- JS ANIMATION + SLIDER -->
+<script>
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+// AUTO IMAGE SLIDER
+const images = ["clinic1.jpg","clinic2.jpg","clinic3.jpg"];
+let i = 0;
+
+setInterval(()=>{
+i++;
+if(i >= images.length) i = 0;
+document.getElementById("slide").src = images[i];
+},2000);
+
+</script>
 
 </body>
 </html>
