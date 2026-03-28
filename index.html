@@ -18,12 +18,26 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
     background: white;
     position: sticky;
     top: 0;
 }
-header h2 { color: #0077b6; }
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
 nav a {
     margin: 10px;
     text-decoration: none;
@@ -40,11 +54,18 @@ nav a {
     color: white;
     flex-wrap: wrap;
 }
-.hero img {
-    width: 320px;
+
+.hero-text img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.hero img.main {
+    width: 300px;
     border-radius: 15px;
     animation: float 4s infinite;
 }
+
 @keyframes float {
     50% { transform: translateY(-10px); }
 }
@@ -125,7 +146,7 @@ input, textarea {
 /* MOBILE */
 @media(max-width:768px){
 .hero {flex-direction: column;text-align:center;}
-.hero img {width:220px;margin-top:20px;}
+.hero img.main {width:220px;margin-top:20px;}
 }
 </style>
 </head>
@@ -133,23 +154,28 @@ input, textarea {
 <body>
 
 <header>
-<h2>Tooth Wings</h2>
-<nav>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+    <div class="logo-box">
+        <img src="logo.jpg">
+        <h2>Tooth Wings</h2>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-<div>
-<h1>Smile Brighter 😁</h1>
-<p>Top-rated Dental Clinic in Zirakpur (4.9⭐)</p>
-<a class="btn" href="tel:9876427788">Call Now</a>
-</div>
+    <div class="hero-text">
+        <img src="logo.jpg">
+        <h1>Smile Brighter 😁</h1>
+        <p>Top-rated Dental Clinic in Zirakpur (4.9⭐)</p>
+        <a class="btn" href="tel:9876427788">Call Now</a>
+    </div>
 
-<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+    <img class="main" src="https://picsum.photos/300/200">
 </section>
 
 <section id="services" class="section">
@@ -163,10 +189,10 @@ input, textarea {
 <section id="gallery" class="section">
 <h2>Clinic Gallery</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e1c2f9c3b">
-<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
-<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09">
-<img src="https://images.unsplash.com/photo-1588771930296-88c2cb03f386">
+<img src="clinic1.jpg">
+<img src="clinic2.jpg">
+<img src="clinic3.jpg">
+<img src="clinic4.jpg">
 </div>
 </section>
 
