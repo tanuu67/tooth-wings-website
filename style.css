@@ -5,18 +5,24 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY */
 body {
     background: linear-gradient(120deg, #e0f7ff, #ffffff);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
 /* HEADER */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    background: white;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    align-items: center;
+    padding: 15px 0;
 }
 
 .logo-box {
@@ -37,16 +43,22 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
 }
 
 /* HERO */
 .hero {
+    padding: 60px 0;
+}
+
+.hero-flex {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-text h1 {
@@ -66,82 +78,81 @@ nav a {
     border-radius: 8px;
 }
 
+.hero-img {
+    flex: 1;
+    text-align: center;
+}
+
 .hero-img img {
-    width: 320px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 20px;
 }
 
 /* GALLERY */
 .gallery {
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
 }
 
 .gallery-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .gallery-box img {
-    width: 200px;
+    width: 100%;
     border-radius: 15px;
-    transition: 0.3s;
-}
-
-.gallery-box img:hover {
-    transform: scale(1.1);
 }
 
 /* SERVICES */
 .services {
-    padding: 60px;
+    padding: 60px 0;
     background: #caf0f8;
     text-align: center;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .card {
     background: white;
     padding: 25px;
     border-radius: 15px;
-    width: 160px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* CONTACT */
 .contact {
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
+    max-width: 400px;
     margin: auto;
 }
 
 form input {
+    width: 100%;
     margin: 10px 0;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     border: 1px solid #ccc;
 }
 
 form button {
+    width: 100%;
     padding: 10px;
     background: #0077b6;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 /* WHATSAPP */
@@ -151,10 +162,9 @@ form button {
     right: 20px;
     background: #25D366;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     padding: 12px;
     border-radius: 50%;
-    text-decoration: none;
 }
 
 /* FOOTER */
@@ -163,4 +173,21 @@ footer {
     padding: 15px;
     background: #0077b6;
     color: white;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
 }
